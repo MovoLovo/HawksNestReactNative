@@ -30,7 +30,7 @@ const Info = () => {
       </View>
       <ActionButton
         buttonColor='rgba(231,76,60,1)'
-        onPress={() => nav.navigate('New')}
+        onPress={() => nav.navigate('ShakeScreen')}
       />
     </View>
   )
