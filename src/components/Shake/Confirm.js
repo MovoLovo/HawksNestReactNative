@@ -1,11 +1,19 @@
 import * as React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, } from "react-native";
-import { useRoute } from '@react-navigation/native';
-
+import { useRoute, useNavigation } from '@react-navigation/native';
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Confirm  = () => {
   const route = useRoute()
+  const nav = useNavigation()
   const item = route.params.item
+
+  const onConfirm = () => {
+    // TODO: Add api communication code here
+    nav.navigate('Info')
+  }
+
   return(
     <View style={s.container}>
       <View style={s.header}>
@@ -19,10 +27,22 @@ const Confirm  = () => {
             <Text style={s.itemPrice}>{item.price}</Text>
           </View>
         </View>
-        {/*
-         1. Add warning text for if the person doesn't pick up the food
-         2. Add Cancel and Ok buttons
-        */}
+        <View style={s.info}>
+          <Text style={s.infoText}>
+            Disclaimer Notice and Additional Information...
+          </Text>
+        </View>
+        <ActionButton 
+          buttonColor='rgba(231,76,60,1)'
+          renderIcon={() => <Icon name='checkmark-sharp' style={s.confirmButtonIcon}/>}
+          onPress={onConfirm}
+        />
+        <ActionButton 
+          buttonColor='rgba(231,76,60,1)'
+          position='left'
+          renderIcon={() => <Icon name='close' style={s.confirmButtonIcon}/>}
+          onPress={() => nav.goBack()}
+        />
       </View>
     </View>
   )
@@ -69,6 +89,17 @@ const s = StyleSheet.create({
     textAlign: 'right',
     color: '#555',
     paddingLeft: 4
+  },
+  info: {
+    padding: 30,
+  },
+  infoText: {
+    fontSize: Dimensions.get("window").width * .07,
+    textAlign: 'center'
+  },
+  confirmButtonIcon: {
+    color: 'rgba(255, 255, 255, 1)',
+    fontSize: Dimensions.get("window").width * .065, 
   }
 })
 
