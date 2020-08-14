@@ -10,8 +10,7 @@ const Confirm  = () => {
   const item = route.params.item
 
   const onConfirm = () => {
-    // TODO: Add api communication code here
-    nav.navigate('Info')
+    nav.navigate('Info', {item})
   }
 
   return(
