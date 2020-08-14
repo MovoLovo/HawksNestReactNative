@@ -9,6 +9,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator, TransitionSpecs } from "@react-navigation/stack";
 
 import Info from './components/Info';
+import SignIn from './components/SignIn';
 
 import NewShake from './components/Shake/NewShake';
 import Confirm from './components/Shake/Confirm';
@@ -48,6 +49,7 @@ const App = () => {
         }
       }}
       headerMode='none'>
+        <Stack.Screen name="SignIn" component={SignIn}/>
         <Stack.Screen name="Info" component={Info}/>
         <Stack.Screen name="ShakeScreen" component={ShakeScreen}/>
       </Stack.Navigator>
