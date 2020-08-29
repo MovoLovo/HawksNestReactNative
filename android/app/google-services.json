@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "599707632945",
+    "firebase_url": "https://hawksnestapp.firebaseio.com",
+    "project_id": "hawksnestapp",
+    "storage_bucket": "hawksnestapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599707632945:android:c0905a960bcc02671d9c10",
+        "android_client_info": {
+          "package_name": "com.hawksnestreactnative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599707632945-q88i0mn1j35mgm3452ou3ee65dm1hrlp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hawksnestreactnative",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "599707632945-1nq4ki7hrsp3uujhgo16f1unpp0hlghe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hawksnestreactnative",
+            "certificate_hash": "5430222297084bcc0057d0fc1023d0d1c6eba8ca"
+          }
+        },
+        {
+          "client_id": "599707632945-tnce6tob9vkv4l6fkpdd8rc50971qltc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC71-r7_zD3lnYz1gpbidLLmTp_Ucje7Xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599707632945-tnce6tob9vkv4l6fkpdd8rc50971qltc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -106,7 +106,7 @@ const s = StyleSheet.create({
     flex: 1
   },
   itemTitle: {
-    fontSize: Dimensions.get("window").width * .1,
+    fontSize: Dimensions.get("window").width * .09,
     textAlign: 'left'
   },
   itemPrice: {

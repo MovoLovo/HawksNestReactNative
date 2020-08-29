@@ -81,7 +81,7 @@ const s = StyleSheet.create({
     borderRadius: 15
   },
   itemTitle: {
-    fontSize: Dimensions.get("window").width * .1,
+    fontSize: Dimensions.get("window").width * .09,
     textAlign: 'right',
   },
   itemPrice: {

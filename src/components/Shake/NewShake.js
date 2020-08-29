@@ -9,40 +9,34 @@ const NewShake = () => {
   const nav = useNavigation()
   const orders = [
     {
-      name: 'Vanilla',
-      variant: ['shake'],
+      name: 'Bacon Egg and Cheese',
+      variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/Oreo.jpg'),
+      img: require('../../img/BaconEggCheese.jpg'),
     },
     {
-      name: 'Chocolate',
-      variant: ['shake'],
+      name: 'Bagel',
+      variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/Oreo.jpg'),
+      img: require('../../img/Bagel.jpg'),
     },
     {
-      name: 'Strawberry',
-      variant: ['shake', 'smoothie'],
+      name: 'Sausage Egg and Cheese',
+      variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/Oreo.jpg'),
+      img: require('../../img/SausageEggCheese.jpg'),
     },
     {
-      name: 'Coffee',
-      variant: ['shake'],
+      name: 'Croissant',
+      variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/Oreo.jpg'),
+      img: require('../../img/Croissant.jpg'),
     },
     {
-      name: 'Banana',
-      variant: ['smoothie'],
+      name: 'English Muffin',
+      variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/Oreo.jpg'),
-    },
-    {
-      name: 'Mango',
-      variant: ['smoothie'],
-      price: 4.99,
-      img: require('../../img/Oreo.jpg'),
+      img: require('../../img/BaconEggCheese.jpg'),
     },
   ]
 
@@ -71,7 +65,7 @@ const NewShake = () => {
   return(
     <View style={s.container}>
       <View style={s.header}>
-        <Text style={s.headerText}>Order Shakes</Text>
+        <Text style={s.headerText}>Order Sandwich</Text>
       </View>
       <View style={s.body}>
         <FlatList style={s.list}
@@ -129,7 +123,7 @@ const s = StyleSheet.create({
     flex: 1
   },
   itemTitle: {
-    fontSize: Dimensions.get("window").width * .1,
+    fontSize: Dimensions.get("window").width * .09,
     textAlign: 'left'
   },
   itemPrice: {
