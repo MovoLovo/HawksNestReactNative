@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableHighlight } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { AuthContext } from '../../Auth/AuthProvider'
 
@@ -12,6 +13,11 @@ const Settings = () => {
     <View style={s.container}>
       <View style={s.header}>
         <Text style={s.headerText}>Settings</Text>
+        <TouchableHighlight
+        underlayColor='rgba(231,76,60,1)'
+        onPress={() => nav.navigate('Info')}>
+          <Icon name='chevron-down' style={s.buttonIcon}/>
+        </TouchableHighlight>
       </View>
       <View style={s.body}>
         <TouchableHighlight style={s.button}
@@ -32,6 +38,8 @@ const s = StyleSheet.create({
     padding: 15,
     borderBottomColor: 'rgba(231,76,60,1)',
     borderBottomWidth: 4,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   headerText: {
     fontSize: Dimensions.get("window").width * .075,
@@ -51,6 +59,9 @@ const s = StyleSheet.create({
   buttonText: {
     fontSize: Dimensions.get("window").width * .065,
     color: 'white'
+  },
+  buttonIcon: {
+    fontSize: Dimensions.get("window").width * .09,
   }
 })
 
