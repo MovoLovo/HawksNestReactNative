@@ -12,31 +12,31 @@ const NewShake = () => {
       name: 'Bacon Egg and Cheese',
       variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/BaconEggCheese.jpg'),
+      img: require('../../../img/BaconEggCheese.jpg'),
     },
     {
       name: 'Bagel',
       variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/Bagel.jpg'),
+      img: require('../../../img/Bagel.jpg'),
     },
     {
       name: 'Sausage Egg and Cheese',
       variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/SausageEggCheese.jpg'),
+      img: require('../../../img/SausageEggCheese.jpg'),
     },
     {
       name: 'Croissant',
       variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/Croissant.jpg'),
+      img: require('../../../img/Croissant.jpg'),
     },
     {
       name: 'English Muffin',
       variant: ['sandwich'],
       price: 4.99,
-      img: require('../../img/BaconEggCheese.jpg'),
+      img: require('../../../img/BaconEggCheese.jpg'),
     },
   ]
 
@@ -68,7 +68,7 @@ const NewShake = () => {
         <Text style={s.headerText}>Order Sandwich</Text>
       </View>
       <View style={s.body}>
-        <FlatList style={s.list}
+        <FlatList
           data={orders}
           renderItem={renderItem}
           keyExtractor={item => item.name}
@@ -99,9 +99,6 @@ const s = StyleSheet.create({
   body: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.1)',
-  },
-  list: {
-
   },
   actionButtonIcon: {
     color: 'rgba(255, 255, 255, 1)',

@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, Dimensions, FlatList, LogBox, Image } from "react-native";
+import { View, Text, StyleSheet, Dimensions, FlatList, LogBox, Image, TouchableHighlight } from "react-native";
 import { useNavigation, useRoute } from '@react-navigation/native';
 import ActionButton from 'react-native-action-button';
 import PropTypes from 'prop-types';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 LogBox.ignoreLogs(['Warning: componentWillReceiveProps has been renamed'])
 
@@ -50,6 +51,10 @@ const Info = () => {
     <View style={s.container}>
       <View style={s.header}>
         <Text style={s.headerText}>Hawks Nest Pre-orders</Text>
+        <TouchableHighlight underlayColor='rgba(231,76,60,1)'
+        onPress={() => nav.navigate('Settings')}>
+          <Icon name='settings-sharp' style={s.settingsIcon}/>
+        </TouchableHighlight>
       </View>
       <View style={s.body}>
         <FlatList style={s.list}
@@ -74,7 +79,9 @@ const s = StyleSheet.create({
   header: {
     padding: 15,
     borderBottomColor: 'rgba(231,76,60,1)',
-    borderBottomWidth: 4
+    borderBottomWidth: 4,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   headerText: {
     fontSize: Dimensions.get("window").width * .075,
@@ -114,7 +121,10 @@ const s = StyleSheet.create({
     color: '#555',
     paddingLeft: 4
   },
-
+  settingsIcon: {
+    fontSize: Dimensions.get("window").width * .1,
+    color: 'rgba(0,0,0,0.7)',
+  }
 })
 
 export default Info
